@@ -1,15 +1,15 @@
 #include <stdio.h>
 /**
- *main - prints 0 to 10 numbers
+ *main - prints put char with ascii numbers
  *Return: 0
 */
 int main(void)
 {
-	int n;
+	int n = 48;
 	int c = 44;
 	int e = 32;
 
-	for (n = 48; n < 58; n++)
+	while (n < 58)
 	{
 		putchar(n);
 		if (n < 57)
@@ -17,6 +17,7 @@ int main(void)
 			putchar(c);
 			putchar(e);
 		}
+		n++;
 	}
 	return (0);
 }
