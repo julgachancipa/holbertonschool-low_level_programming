@@ -5,14 +5,14 @@
 */
 int main(void)
 {
-	int n = 48;
-	int c = 44;
-	int e = 32;
+	int n = '0';
+	int c = ',';
+	int e = ' ';
 
-	while (n < 58)
+	while (n <= '9')
 	{
 		putchar(n);
-		if (n < 57)
+		if (n != '9')
 		{
 			putchar(c);
 			putchar(e);
