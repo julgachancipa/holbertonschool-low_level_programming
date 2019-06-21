@@ -9,6 +9,8 @@ int main(void)
 	int i;
 	int j;
 	int k;
+	int l;
+	int m;
 
 	for (n = '0'; n <= '9'; n++)
 	{
@@ -18,7 +20,9 @@ int main(void)
 			{
 				for (k = '1'; k <= '9'; k++)
 				{
-					if (j >= n && k >= i)
+					m = n + i;
+					l = j + k;
+					if (l > m)
 					{
 						putchar(n);
 						putchar(i);
