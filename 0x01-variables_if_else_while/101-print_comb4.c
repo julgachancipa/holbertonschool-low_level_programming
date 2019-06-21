@@ -15,12 +15,15 @@ int main(void)
 		{
 			for (j = '2'; j <= '9'; j++)
 			{
-				if (i != j && i > n && j > n)
+				int a = i + i;
+				int x = j + i;
+
+				if (i != j && i > n && j > n && x > a)
 				{
 					putchar(n);
 					putchar(i);
 					putchar(j);
-					if (!(n == '7' && i == '9' && j == '8'))
+					if (!(n == '7' && i == '8' && j == '9'))
 					{
 						putchar(',');
 						putchar(' ');
