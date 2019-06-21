@@ -11,19 +11,16 @@ int main(void)
 
 	for (n = '0'; n <= '9'; n++)
 	{
-		for (i = '0'; i <= '9'; i++)
+		for (i = '1'; i <= '9'; i++)
 		{
-			for (j = '0'; j <= '9'; j++)
+			for (j = '2'; j <= '9'; j++)
 			{
-				int a = n * 3;
-				int x = n + i + j;
-
-				if (x > a)
+				if (n != i && i != j && n != j && i > n && j > n)
 				{
 					putchar(n);
 					putchar(i);
 					putchar(j);
-					if (!(n == '8' && i == '9' && j == '9'))
+					if (!(n == '7' && i == '9' && j == '8'))
 					{
 						putchar(',');
 						putchar(' ');
