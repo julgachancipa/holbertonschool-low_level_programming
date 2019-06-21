@@ -20,13 +20,16 @@ int main(void)
 				{
 					if (n >= j && i < k)
 					{
-					putchar(n);
-					putchar(i);
-					putchar(' ');
-					putchar(j);
-					putchar(k);
-					putchar(',');
-					putchar(' ');
+						putchar(n);
+						putchar(i);
+						putchar(' ');
+						putchar(j);
+						putchar(k);
+					if (!(n == '9' && i == '8' && k == '9' && j == '9'))
+					{
+						putchar(',');
+						putchar(' ');
+					}
 					}
 				}
 			}
