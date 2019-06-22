@@ -5,27 +5,31 @@
 */
 int main(void)
 {
-	int n;
-	int i;
-	int j;
-	int k;
+	int a;
+	int b;
+	int c;
+	int d;
+	int num1;
+	int num2;
 
-	for (n = '0'; n <= '9'; n++)
+	for (a = '0'; a <= '9'; a++)
 	{
-		for (i = '0'; i <= '8'; i++)
+		for (b = '0'; b <= '8'; b++)
 		{
-			for (j = '0'; j <= '9'; j++)
+			for (c = '0'; c <= '9'; c++)
 			{
-				for (k = '1'; k <= '9'; k++)
+				for (d = '1'; d <= '9'; d++)
 				{
-					if (j >= n && k > i)
+					num1 = ((int) a * 10) + ((int) b);
+					num2 = ((int) c * 10) + ((int) d);
+					if (num2 > num1)
 					{
-						putchar(n);
-						putchar(i);
+						putchar(a);
+						putchar(b);
 						putchar(' ');
-						putchar(j);
-						putchar(k);
-					if (!(n == '9' && i == '8' && k == '9' && j == '9'))
+						putchar(c);
+						putchar(d);
+					if (!(a == '9' && b == '8' && c == '9' && d == '9'))
 					{
 						putchar(',');
 						putchar(' ');
