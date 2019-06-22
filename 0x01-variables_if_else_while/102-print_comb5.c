@@ -20,8 +20,8 @@ int main(void)
 			{
 				for (d = '1'; d <= '9'; d++)
 				{
-					num1 = ((int) a * 10) + ((int) b);
-					num2 = ((int) c * 10) + ((int) d);
+					num1 = (((int) a - '0') * 10) + ((int) b - '0');
+					num2 = (((int) c - '0') * 10) + ((int) d - '0');
 					if (num2 > num1)
 					{
 						putchar(a);
