@@ -6,13 +6,12 @@
 int main(void)
 {
 	char h[] = "Holberton";
-	char n = '\n';
 	int i;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 9; i++)
 	{
 		_putchar (h[i]);
 	}
-	_putchar(n);
+	_putchar('\n');
 	return (0);
 }
