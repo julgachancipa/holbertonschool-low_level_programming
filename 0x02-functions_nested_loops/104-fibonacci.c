@@ -5,17 +5,26 @@
  */
 int main(void)
 {
-	unsigned long i = 1;
-	long int j = 0;
-	long int k, l;
+	unsigned long num_1_a = 0;
+	unsigned long num_1_b = 0;
+	unsigned long num_2_a = 0;
+	unsigned long num_2_b = 1;
+	unsigned long num_a, num_b, i;
+	int k;
 
 	for (k = 1; k <= 98; k++)
 	{
-		l = j;
-		j = i;
-		i = l + j;
-		printf("%ld", i);
-		if (k < 50)
+		num_a = num_1_a + num_2_a;
+		num_b = num_1_b + num_2_b;
+		i = (num_b - (num_b % 100000000000)) / 100000000000;
+		num_a += i;
+		num_b -= (i * 100000000000);
+		num_1_a = num_2_a;
+		num_1_b = num_2_b;
+		num_2_a = num_a;
+		num_2_b = num_b;
+		printf("%lu%lu", num_a, num_b);
+		if (k < 98)
 			printf(", ");
 	}
 	printf("\n");
