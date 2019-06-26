@@ -23,7 +23,11 @@ int main(void)
 		num_1_b = num_2_b;
 		num_2_a = num_a;
 		num_2_b = num_b;
-		printf("%lu%lu", num_a, num_b);
+		if (num_a > 0)
+		{
+		printf("%lu", num_a);
+		}
+		printf("%lu", num_b);
 		if (k < 98)
 			printf(", ");
 	}
