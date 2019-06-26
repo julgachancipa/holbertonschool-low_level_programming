@@ -5,11 +5,11 @@
  */
 int main(void)
 {
-	unsigned long num_1_a = 0;
-	unsigned long num_1_b = 0;
-	unsigned long num_2_a = 0;
-	unsigned long num_2_b = 1;
-	unsigned long num_a, num_b, i;
+	long int num_1_a = 0;
+	long int num_1_b = 0;
+	long int num_2_a = 0;
+	long int num_2_b = 1;
+	long int num_a, num_b, i;
 	int k;
 
 	for (k = 1; k <= 98; k++)
@@ -25,9 +25,9 @@ int main(void)
 		num_2_b = num_b;
 		if (num_a > 0)
 		{
-		printf("%lu", num_a);
+		printf("%ld", num_a);
 		}
-		printf("%lu", num_b);
+		printf("%ld", num_b);
 		if (k < 98)
 			printf(", ");
 	}
