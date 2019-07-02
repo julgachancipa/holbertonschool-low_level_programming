@@ -13,7 +13,7 @@ int _atoi(char *s)
 	for (i = 0; i < 1000; i++)
 	{
 		if (s[i] == '-')
-                        sig = sig * -1;
+			sig = sig * -1;
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			res = res * 10;
