@@ -13,7 +13,7 @@ void print_array(int *a, int n)
 
 	for (i = 0; i < 1000; i++)
 	{
-		if (s[i] == '\0')
+		if (a[i] == '\0')
 			break;
 		sz++;
 	}
