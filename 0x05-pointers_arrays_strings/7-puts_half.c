@@ -7,15 +7,19 @@
 void puts_half(char *str)
 {
 	int i;
-	int length_of_the_string = 0;
+	int sz = 0;
 
 	for (i = 0; i < 1000; i++)
 	{
 		if (str[i] == '\0')
 			break;
-		length_of_the_string++;
+		sz++;
 	}
-	for (i = (length_of_the_string) / 2; i < length_of_the_string; i++)
+	if (sz % 2 != 0)
+	{
+		sz -= 1;
+	}
+	for (i = sz / 2; i < sz; i++)
 	{
 		_putchar(str[i]);
 	}
