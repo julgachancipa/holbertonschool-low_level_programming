@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+/**
+ * main - generates a random pswd.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+        char psw[500];
+        int digit;
+        int i = 0;
+        int sum = 0;
+        time_t t;
+        int aux;
+
+/* Intializes random number generator */
+        srand((unsigned) time(&t));
+        for (i = 0;sum < 2772; i++)
+        {
+		do{
+                digit = rand() % 90;
+		}while(digit > 48); 
+                psw[i] = digit;
+                sum += digit;
+        }
+	if (sum > 2772)
+	{
+		aux = sum - 2772;
+		psw[i-1] -= aux;
+		sum -= aux;
+	}
+        printf("%s", psw);
+}
