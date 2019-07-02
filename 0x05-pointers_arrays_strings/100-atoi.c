@@ -10,7 +10,7 @@ int _atoi(char *s)
 	int res = 0;
 	int sig = 1;
 
-	for (i = 0; i < 1000; i++)
+	for (i = 0; s[i] != 0; i++)
 	{
 		if (s[i] == '-')
 			sig = sig * -1;
