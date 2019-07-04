@@ -7,7 +7,7 @@
 char *leet(char *s)
 {
 	int i, j;
-	char l[] = "o__ea__t";
+	char l[] = "ol_ea__t";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
