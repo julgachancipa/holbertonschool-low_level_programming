@@ -2,23 +2,27 @@
 /**
  * _strspn - gets the length of a prefix substring.
  * @s: s1
- * @accept: s2 
+ * @accept: s2
  *
  * Return: n
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int n = 0;
+	unsigned int n = 0, i, j;
 
-	while ((s[i] > 'a' || s[i&& s[i])
+	for (j = 0; s[j]; j++)
 	{
-		while (*accept != '\0')
+		if ((s[j] >= 'a' && s[j] <= 'z') || (s[j] >= 'A' && s[j] <= 'Z'))
 		{
-			if (*s == *accept)
-				n++;
-			accept++;
+			for (i = 0; accept[i];  i++)
+			{
+				if (s[j] == accept[i])
+					n++;
+			}
 		}
-		s++;
+		else
+			break;
 	}
+
 	return (n);
 }
