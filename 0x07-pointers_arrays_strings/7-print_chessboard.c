@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * print_chessboard - prints chess.
- *
+ * @a: matrix
  * Return: Always 0.
  */
 void print_chessboard(char (*a)[8])
