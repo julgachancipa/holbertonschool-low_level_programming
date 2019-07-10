@@ -17,8 +17,9 @@ int strsize(char *s)
 }
 /**
  * comp - comp chars
- * @a: char 1
- * @b: char 2
+ * @a: string
+ * @sz: size
+ * @i: aux
  * Return: 1 / 0
  */
 int comp(char *a, int sz, int i)
@@ -26,7 +27,7 @@ int comp(char *a, int sz, int i)
 	if (i >= sz)
 		return (1);
 	else if (a[i] == a[sz])
-		return(comp(a , sz - 1, i + 1));
+		return (comp(a, sz - 1, i + 1));
 	else
 		return (0);
 }
