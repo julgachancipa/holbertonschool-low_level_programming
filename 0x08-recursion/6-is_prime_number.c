@@ -1,4 +1,10 @@
 #include "holberton.h"
+/**
+ * mod - evalue factors of a number.
+ * @n: number
+ * @aux: factor
+ * Return: 0 - 1
+ */
 int mod(int aux, int n)
 {
 	int sum = 0;
@@ -9,10 +15,10 @@ int mod(int aux, int n)
 			sum++;
 		return (sum + mod(aux + 1, n));
 	}
-	return(sum);
-}		
+	return (sum);
+}
 /**
- * is_prime_number - returns 1 if the input integer is a prime number, otherwise return 0.
+ * is_prime_number - evalue prime number.
  * @n: number
  * Return: 0 - 1
  */
