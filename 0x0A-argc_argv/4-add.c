@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
 				if (*(*(argv + i) + j) > '9')
 					b = 1;
 			}
+			if (atoi(argv[i]) == 0 && *argv[i] != '0')
+				b = 1;
 			add += atoi(argv[i]);
 		}
 		if (b == 1)
