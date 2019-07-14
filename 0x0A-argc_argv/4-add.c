@@ -1,41 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - add numbers, followed by a new line.
  * @argc: number of arguments
  * @argv: array of pointers to the strings (arguments)
- * Return: 0
+ * Return: 0 or 1
  */
 int main(int argc, char *argv[])
 {
-	int i, j, add = 0, b = 0;
+	int i, j, add = 0;
 
-	if (argc == 1)
+	for (i = 1; i < argc; i++)
 	{
-		printf("%d\n", 0);
-	}
-	else if (argc > 1)
-	{
-		for (i = 1; i < argc; i++)
+		for (j = 0; *(*(argv + i) + j); j++)
 		{
-			for (j = 0; *(*(argv + i) + j) != '\0'; j++)
+			if (isdigit(*(*(argv + i) + j)) == 0)
 			{
-				if (*(*(argv + i) + j) < '0')
-					b = 1;
-				if (*(*(argv + i) + j) > '9')
-					b = 1;
+				printf("Error\n");
+				return (1);
 			}
-			if (atoi(argv[i]) == 0 && *argv[i] != '0')
-				b = 1;
-			add += atoi(argv[i]);
 		}
-		if (b == 1)
-		{
-			printf("Error\n");
-			return (1);
-		}
-		else
-			printf("%d\n", add);
+		add += atoi(argv[i]);
 	}
+	printf("%d\n", add);
 	return (0);
 }
