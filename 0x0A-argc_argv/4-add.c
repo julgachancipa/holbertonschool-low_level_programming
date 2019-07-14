@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 			{
 				if (*(*(argv + i) + j) < '0')
 					b = 1;
-				if ( *(*(argv + i) + j) > '9')
+				if (*(*(argv + i) + j) > '9')
 					b = 1;
 			}
 			add += atoi(argv[i]);
