@@ -8,14 +8,17 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0, b = 1, i;
+	int sum = 0, b = 1, i, j;
 
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (*(argv[i]) != '0' && atoi(argv[i]) == 0)
-				b = 0;
+			for (j = 0; *(argv + i)[j] != '\0'; j++)
+			{
+				if (*(argv + i)[j] < '0' || *(argv + i)[j] > '9')
+					b = 0;
+			}
 			sum += atoi(argv[i]);
 		}
 	}
