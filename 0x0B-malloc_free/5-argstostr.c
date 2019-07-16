@@ -63,8 +63,8 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		a = _strcat(a, av[i]);
-		a = _strcat(a, "\n");
+		_strcat(a, av[i]);
+		_strcat(a, "\n");
 	}
 	return (a);
 }
