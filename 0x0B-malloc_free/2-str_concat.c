@@ -56,8 +56,9 @@ char *_strcat(char *dest, char *src)
 	return (dest);
 }
 /**
- * _strdup - returns a pointer to a newly allocated space in memory.
- * @str: str size
+ * str_concat - concat 2 strg.
+ * @s1: str1
+ * @s2: str2
  * Return: string
  */
 char *str_concat(char *s1, char *s2)
@@ -65,7 +66,7 @@ char *str_concat(char *s1, char *s2)
 	char *s;
 
 	if (s1 == NULL)
-		s1 ="";
+		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 	s = malloc(_strlen(s1) + _strlen(s2) + 1);
