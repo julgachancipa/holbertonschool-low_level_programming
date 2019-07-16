@@ -25,13 +25,12 @@ char *_strdup(char *str)
 {
 	unsigned int i;
 	char *s;
-	int sz = _strlen_recursion(str);
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	s = malloc(sz + 1);
+	s = malloc( _strlen_recursion(str) + 1);
 	if (s == NULL)
 	{
 		return (NULL);
