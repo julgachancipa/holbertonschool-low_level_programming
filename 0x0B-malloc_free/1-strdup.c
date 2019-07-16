@@ -27,18 +27,19 @@ char *_strdup(char *str)
 	char *s;
 	int sz = _strlen_recursion(str);
 
-	s = malloc(sz);
-	if (str == NULL || sz == 0)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-	else
+	s = malloc(sz + 1);
+	if (s == NULL)
 	{
-		for (i = 0; str[i]; i++)
-		{
-			s[i] = str[i];
-		}
-		s[i] = '\0';
-		return (s);
+		return (NULL);
 	}
+	for (i = 0; str[i]; i++)
+	{
+		s[i] = str[i];
+	}
+	s[i] = '\0';
+	return (s);
 }
