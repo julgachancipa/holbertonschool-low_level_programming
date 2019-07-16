@@ -27,7 +27,7 @@ char *_strdup(char *str)
 	unsigned int i;
 	char *s;
 
-	s = malloc(_strlen_recursion(str));
+	s = malloc(_strlen_recursion(str) + 1);
 	if (str == NULL)
 	{
 		return (NULL);
