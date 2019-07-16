@@ -52,7 +52,7 @@ char *argstostr(int ac, char **av)
 	{
 		sz += _strlen(av[i]) + 1;
 	}
-	a = malloc(sz);
+	a = malloc(sz + 1);
 	if (a == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
