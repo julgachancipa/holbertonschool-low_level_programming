@@ -50,7 +50,7 @@ char *_strcat(char *dest, char *src)
 char *argstostr(int ac, char **av)
 {
 	char *a;
-	int i, sz;
+	int i, sz = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -59,6 +59,8 @@ char *argstostr(int ac, char **av)
 		sz += _strlen(av[i]) + 1;
 	}
 	a = malloc(sz);
+	if (a == NULL)
+		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
 		a = _strcat(a, av[i]);
