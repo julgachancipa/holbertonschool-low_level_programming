@@ -25,15 +25,9 @@ int _strlen(char *s)
  */
 char *_strcat(char *dest, char *src)
 {
-	int sz1 = 0;
+	int sz1 = _strlen(dest);
 	int i;
 
-	for (i = 0; i < 1000; i++)
-	{
-		if (dest[i] == '\0')
-			break;
-		sz1++;
-	}
 	for (i = 0; src[i] != '\0'; i++)
 	{
 		dest[sz1 + i] = src[i];
