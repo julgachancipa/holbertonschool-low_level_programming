@@ -30,7 +30,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	s = malloc( _strlen_recursion(str) + 1);
+	s = malloc(_strlen_recursion(str) + 1);
 	if (s == NULL)
 	{
 		return (NULL);
