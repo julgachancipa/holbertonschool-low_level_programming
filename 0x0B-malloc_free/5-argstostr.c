@@ -52,7 +52,6 @@ char *argstostr(int ac, char **av)
 	char *a;
 	int i, sz;
 
-	a = "";
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
