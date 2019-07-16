@@ -25,10 +25,10 @@ char *_strdup(char *str)
 {
 	unsigned int i;
 	char *s;
-	int sz = _strlen_recursion(str) + 1;
+	int sz = _strlen_recursion(str);
 
-	s = malloc(sz);
-	if (str == NULL || sz == 1)
+	s = malloc(sz + 1);
+	if (str == NULL || sz == 0)
 	{
 		return (NULL);
 	}
