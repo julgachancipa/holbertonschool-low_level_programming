@@ -2,6 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ *  _words - count words.
+ * @str: all str
+ *
+ * Return: count.
+ */
+int _words(char *str)
+{
+	int i, words = 0;
+
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+			words++;
+	}
+	return (words);
+}
+/**
  * strtow - splits a string into words.
  * @str: all str
  *
@@ -12,11 +29,7 @@ char **strtow(char *str)
 	int i, j, k, l, m = 0, words = 0, letters;
 	char **a;
 
-	for (i = 0; str[i]; i++)
-	{
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-			words++;
-	}
+	words = _words(str);
 	a = malloc(sizeof(char *) * words);
 	if (a == NULL)
 		return (NULL);
@@ -51,6 +64,6 @@ char **strtow(char *str)
 			k++;
 		}
 		a[i][k] = '\0';
-      	}
+	}
 	return (a);
 }
