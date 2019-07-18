@@ -29,6 +29,8 @@ char **strtow(char *str)
 	int i, j, k, l, m = 0, words = 0, letters;
 	char **a;
 
+	if (str == NULL)
+		return (NULL);
 	words = _words(str);
 	a = malloc(sizeof(char *) * words);
 	if (a == NULL)
