@@ -45,7 +45,7 @@ char **strtow(char *str)
 	int i, k, l, m = 0, words = 0, letters;
 	char **a;
 
-	if (str == NULL)
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	words = _words(str);
 	a = malloc(sizeof(char *) * words);
