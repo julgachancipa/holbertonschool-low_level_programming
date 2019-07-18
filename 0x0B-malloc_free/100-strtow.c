@@ -19,6 +19,22 @@ int _words(char *str)
 	return (words);
 }
 /**
+ *  _free - free mtx mem.
+ * @a: *str
+ * @i: aux
+ * Return: ntg.
+ */
+void _free(char **a, int i)
+{
+	int j;
+
+	for (j = 0; j <= i; j++)
+	{
+		free(a[j]);
+	}
+	free(a);
+}
+/**
  * strtow - splits a string into words.
  * @str: all str
  *
@@ -26,7 +42,7 @@ int _words(char *str)
  */
 char **strtow(char *str)
 {
-	int i, j, k, l, m = 0, words = 0, letters;
+	int i, k, l, m = 0, words = 0, letters;
 	char **a;
 
 	if (str == NULL)
@@ -50,11 +66,7 @@ char **strtow(char *str)
 		a[i] = malloc(letters * sizeof(char) + 1);
 		if (a[i] == NULL)
 		{
-			for (j = 0; j <= i; j++)
-			{
-				free(a[j]);
-			}
-			free(a);
+			_free(a, i);
 			return (NULL);
 		}
 		m = l - letters + 1;
