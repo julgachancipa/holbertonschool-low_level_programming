@@ -21,5 +21,5 @@ int *array_range(int min, int max)
 	p = malloc(len * sizeof(int) + 1);
 	for (i = min; i <= max; i++)
 		p[i] = i;
-	return (p);	
+	return (p);
 }
