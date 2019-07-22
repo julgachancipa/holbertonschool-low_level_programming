@@ -40,6 +40,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(ndog);
 		return (NULL);
 	}
+	for (i = 0; i <= szn; i++)
+		ndog->name[i] = name[i];
+	ndog->age = age;
 	ndog->owner = malloc(sizeof(char) * szo + 1);
 	if (ndog->owner == NULL)
 	{
@@ -47,12 +50,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(ndog);
 		return (NULL);
 	}
-	for (i = 0; i < szn; i++)
-		ndog->name[i] = name[i];
-	ndog->name[i] = '\0';
-	for (j = 0; j < szo; j++)
-		ndog->name[j] = name[j];
-	ndog->name[j] = '\0';
-	ndog->age = age;
+	for (j = 0; j <= szo; j++)
+		ndog->owner[j] = owner[j];
 	return (ndog);
 }
