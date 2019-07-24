@@ -11,18 +11,18 @@ int main(int argc, char **argv)
 {
 	if (argc != 4)
 	{
-		printf("%s", "Error\n");
+		printf("Error\n");
 		exit(98);
 	}
 	if (argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*'
 	     && argv[2][0] != '/' && argv[2][0] != '%')
 	{
-		printf("%s", "Error\n");
+		printf("Error\n");
 		exit(99);
 	}
-	if (argv[2][1])
+	if (argv[2][1] != '\0')
 	{
-		printf("%s", "Error\n");
+		printf("Error\n");
 		exit(99);
 	}
 
