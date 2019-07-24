@@ -14,8 +14,8 @@ int main(int argc, char **argv)
 		printf("%s", "Error\n");
 		exit(98);
 	}
-	if ((argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*'
-	     && argv[2][0] != '/' && argv[2][0] != '%') || !(get_op_func(argv[2])))
+	if (argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*'
+	     && argv[2][0] != '/' && argv[2][0] != '%')
 	{
 		printf("%s", "Error\n");
 		exit(99);
