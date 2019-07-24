@@ -10,7 +10,7 @@
 int main(int argc, char **argv)
 {
 	char aux = argv[2][0];
-	int a = 0;
+	int a = 0, num1 = 0, num2 = 0;
 
 	if (argc != 4)
 	{
@@ -29,10 +29,11 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[3]);
+	 num1 = atoi(argv[1]);
+	 num2 = atoi(argv[3]);
 
 	a = (get_op_func(argv[2]))(num1, num2);
+
 	printf("%d\n", a);
 	return (0);
 }
