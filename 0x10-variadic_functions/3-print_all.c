@@ -38,9 +38,11 @@ void str(va_list lst)
 	char *aux = va_arg(lst, char *);
 
 	if (aux != NULL)
+	{
 		printf("%s", aux);
-	else
-		printf("(nil)");
+		return;
+	}
+	printf("(nil)");
 }
 /**
  * print_all - prints anything.
@@ -62,7 +64,7 @@ void print_all(const char * const format, ...)
 	va_start(lst, format);
 	i = 0;
 	k = 0;
-	while (format[i] != '\0' && format != NULL)
+	while (format != NULL && format[i])
 	{
 		j = 0;
 		while (j < 4)
@@ -71,10 +73,10 @@ void print_all(const char * const format, ...)
 			{
 				switch (k)
 				{
-					case 0:
-						break;
-					default:
-						printf(", ");
+				case 0:
+					break;
+				default:
+					printf(", ");
 				}
 				var[j].f(lst);
 				k++;
