@@ -8,9 +8,7 @@
  */
 void character(va_list lst)
 {
-	char aux = va_arg(lst, int);
-
-	printf("%c", aux);
+	printf("%c", va_arg(lst, int));
 }
 /**
  * integer - pi
@@ -19,9 +17,7 @@ void character(va_list lst)
  */
 void integer(va_list lst)
 {
-	int aux = va_arg(lst, int);
-
-	printf("%d", aux);
+	printf("%d", va_arg(lst, int));
 }
 /**
  * floater - pf
@@ -30,9 +26,7 @@ void integer(va_list lst)
  */
 void floater(va_list lst)
 {
-	double aux = va_arg(lst, double);
-
-	printf("%f", aux);
+	printf("%f", va_arg(lst, double));
 }
 /**
  * str - ps
@@ -68,7 +62,7 @@ void print_all(const char * const format, ...)
 	va_start(lst, format);
 	i = 0;
 	k = 0;
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format != NULL)
 	{
 		j = 0;
 		while (j < 4)
