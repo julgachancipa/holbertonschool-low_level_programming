@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * free_listint.
+ * free_listint - free list.
  * @head: head pointer.
  * Return: ntg.
  */
