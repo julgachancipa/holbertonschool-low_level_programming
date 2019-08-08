@@ -27,6 +27,8 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned long int mask;
 	int bit;
 
+	if (index >= 64)
+		return (-1);
 	mask = pof(2, index);
 	if (n & mask)
 		bit = 1;
