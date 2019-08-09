@@ -1,22 +1,6 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * pof - pows a number
- * @x: number
- * @n: power
- * Return: result
- */
-unsigned int pof(unsigned int x, unsigned int n)
-{
-	unsigned int i, result = 1;
-
-	if (n == 0)
-		return (1);
-	for (i = 1; i <= n; i++)
-		result *= x;
-	return (result);
-}
-/**
  * clear_bit -  sets the value of a bit to 1 at a given index.
  * @n: number
  * @index: position
@@ -24,9 +8,11 @@ unsigned int pof(unsigned int x, unsigned int n)
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
+	unsigned int mask;
+
 	if (index >= 64)
 		return (-1);
-	if (*n)
-		*n = *n - pof(2, index);
+	mask = 1 << index;
+	*n &= ~mask;
 	return (1);
 }
