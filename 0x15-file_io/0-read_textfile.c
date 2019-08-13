@@ -8,10 +8,10 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
-	ssize_t print;
+	ssize_t print = 0;
 	int fd, error_;
 
-	if (filename == NULL || letters == 0)
+	if (filename == NULL)
 		return (0);
 	buf = malloc(letters);
 	if (buf == NULL)
@@ -20,10 +20,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 	print = read(fd, buf, letters);
-	buf[letters] = '\0';
-	close(fd);
 	error_ = write(STDOUT_FILENO, buf, letters);
 	if (error_ == -1)
 		return (0);
+	close(fd);
 	return (print);
 }
