@@ -34,7 +34,8 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
-	error_ = write(fd, text_content, sz);
+	if (text_content)
+		error_ = write(fd, text_content, sz);
 	if (error_ == -1)
 		return (-1);
 	close(fd);
