@@ -33,7 +33,8 @@ int close_(int f1, int f2)
  */
 int main(int argc, char **argv)
 {
-	int f1, f2, len = 1024, wr;
+	int f1, f2;
+	ssize_t len = 1024, wr;
 	char buf[1024];
 
 	if (argc != 3)
@@ -47,7 +48,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	f2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	f2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	if (f2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
