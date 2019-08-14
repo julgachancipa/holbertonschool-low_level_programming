@@ -5,9 +5,9 @@
  * close_ - return -1 if close fails.
  * @f1: file 1
  * @f2: file 2
- * Return: -1 if fails
+ * Return: ntg
  */
-int close_(int f1, int f2)
+void close_(int f1, int f2)
 {
 	int c1, c2;
 
@@ -23,7 +23,6 @@ int close_(int f1, int f2)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f2);
 		exit(100);
 	}
-	return (0);
 }
 /**
  * main - cp a file to other.
@@ -48,7 +47,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	f2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	f2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
 	if (f2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
@@ -59,13 +58,13 @@ int main(int argc, char **argv)
 		len = read(f1, buf, 1024);
 		if (len == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 			exit(98);
 		}
 		wr = write(f2, buf, len);
 		if (wr == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
 	}
