@@ -9,16 +9,12 @@
  */
 void close_(int f1, int f2)
 {
-	int c1, c2;
-
-	c1 = close(f1);
-	if (c1 == -1)
+	if (close(f1))
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f1);
 		exit(100);
 	}
-	c2 = close(f2);
-	if (c2 == -1)
+	if (close(f2))
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f2);
 		exit(100);
@@ -33,12 +29,12 @@ void close_(int f1, int f2)
 int main(int argc, char **argv)
 {
 	int f1, f2;
-	ssize_t len = 1024, wr;
+	ssize_t len, wr;
 	char buf[1024];
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
 	f1 = open(argv[1], O_RDONLY);
@@ -50,9 +46,10 @@ int main(int argc, char **argv)
 	f2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
 	if (f2 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
+	len = 1024;
 	while (len == 1024)
 	{
 		len = read(f1, buf, 1024);
