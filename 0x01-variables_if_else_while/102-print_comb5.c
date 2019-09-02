@@ -29,11 +29,11 @@ int main(void)
 						putchar(' ');
 						putchar(c);
 						putchar(d);
-					if (!(num1 == 98 && num2 == 99))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+						if (!(num1 == 98 && num2 == 99))
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 				}
 			}
