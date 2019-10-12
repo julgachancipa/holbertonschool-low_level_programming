@@ -11,17 +11,16 @@ void hash_table_delete(hash_table_t *ht)
 
 	if (!ht)
 		return;
-	printf("{");
 	for (i = 0; i < (ht->size); i++)
 	{
 		current = ht->array[i];
 		while (current != NULL)
 		{
 			prev = current;
+			current = current->next;
 			free(prev->key);
 			free(prev->value);
 			free(prev);
-			current = prev->next;
 		}
 	}
 	free(ht->array);
