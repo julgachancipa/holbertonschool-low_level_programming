@@ -2,6 +2,11 @@
 #define SORT_H
 
 
+/* L I B R A R I E S */
+#include <stdio.h>
+#include <stdlib.h>
+
+
 /* S T R U C T U R E S */
 
 /**
