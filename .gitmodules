@@ -1,3 +1,6 @@
 [submodule "0x19-stacks_queues_lifo_fifo"]
 	path = 0x19-stacks_queues_lifo_fifo
 	url = git@github.com:geraldinnebohr/monty.git
+[submodule "0x1B-sorting_algorithms"]
+	path = 0x1B-sorting_algorithms
+	url = git@github.com:julgachancipa/sorting_algorithms.git
