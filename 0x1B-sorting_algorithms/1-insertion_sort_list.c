@@ -2,15 +2,24 @@
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *current;
-	int i, j, a_prev, a_next, b_prev, b_next;
+	listint_t *current_in, *current_out, *c, *n;
 
-	current = list;
-	for (i = 0; current; i++)
+	current_out = (*list)->next;
+	while (current_out)
 	{
-		for (j = i; j > 0; j--)
+		current_in = current_out;
+		while (current_in && (current_in->prev)->n > current_in->n)
 		{
-			
+		        c = current_in->prev;
+			n = current_in;
+			(current_in->prev->prev)->next = n;
+			current_in->prev = c->next;
+			current_in->next = n->prev;
+			(current_in->prev)->prev = c->prev;
+			(current_in->prev)->next = n->next;
+			print_list(*list);
+			current_in = current_in->prev;
 		}
+		current_out = current_out->next;
 	}
 }
