@@ -9,7 +9,7 @@ def turn_grid(grid):
     turn a grid
     """
     new_grid = []
-    for n in range(0, len(grid)):
+    for n in range(0, len(grid[0])):
         new_row = []
         for row in grid:
             new_row.append(row[n])
@@ -40,4 +40,5 @@ def island_perimeter(grid):
     turned_grid = turn_grid(grid)
     a = side_counter(grid)
     b = side_counter(turned_grid)
-    return a + b
+    r = a + b
+    return r
