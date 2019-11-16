@@ -2,18 +2,17 @@ CC=gcc
 SRC=main.c holberton.c
 OBJ=$(patsubst %.c,%.o,$(SRC))
 NAME=holberton
-RM=oclean
+RM=rm -f
 
 all: $(OBJ)
 	$(CC) $^ -o $(NAME)
 
 clean:
-	rm -f *~ $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
-	rm -f $(OBJ)
+	$(RM) $(OBJ)
 
 fclean:	clean oclean
 
-re: $(RM) all
-
+re: oclean all
