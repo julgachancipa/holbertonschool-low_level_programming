@@ -3,10 +3,10 @@ SRC=main.c holberton.c
 OBJ=main.o holberton.o
 NAME=holberton
 
-all: $(NAME)
+all: holberton
 
 %.o: %.c %.h
 	$(CC) -c $^
 
-$(NAME): $(OBJ)
+holberton: $(OBJ)
 	$(CC) $^ -o $@
