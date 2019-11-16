@@ -1,12 +1,7 @@
 CC=gcc
 SRC=main.c holberton.c
-OBJ=main.o holberton.o
+OBJ=$(patsubst %.c,%.o,$(SRC))
 NAME=holberton
 
-all: holberton
-
-%.o: %.c %.h
-	$(CC) -c $^
-
-holberton: $(OBJ)
-	$(CC) $^ -o $@
+all: $(OBJ)
+	$(CC) $^ -o $(NAME)
