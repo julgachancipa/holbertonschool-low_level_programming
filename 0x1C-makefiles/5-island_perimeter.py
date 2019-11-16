@@ -22,9 +22,13 @@ def side_counter(grid):
     count horizontal sides
     """
     count = 0
-    for i in range(0, len(grid) - 1):
+    for i in range(0, len(grid)):
+        if i == 0 or i == len(grid) - 1:
+            for k in range(0, len(grid[i])):
+                if grid[i][k]:
+                    count += 1
         for j in range(0, len(grid[i])):
-            if grid[i][j] != grid[i + 1][j]:
+            if i < len(grid) - 1 and grid[i][j] != grid[i + 1][j]:
                 count += 1
     return count
 
