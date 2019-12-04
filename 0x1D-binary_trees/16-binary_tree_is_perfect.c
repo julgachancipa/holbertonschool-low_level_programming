@@ -1,8 +1,9 @@
 #include "binary_trees.h"
 
 /**
- *
- *
+ * size - function that get the size of a binary tree
+ * @tree: pointer to the root
+ * Return: size of the binary tree
  */
 
 int size(const binary_tree_t *tree)
@@ -17,13 +18,13 @@ int size(const binary_tree_t *tree)
 	sz += size(tree->left);
 	sz += size(tree->right);
 
-	return(sz);
+	return (sz);
 }
 
 /**
- *
- *
- *
+ * binary_tree_is_perfect - function that checks if a tree is perfect
+ * @tree: pointer to the root
+ * Return: 1 if true or 0 if false
  */
 
 int binary_tree_is_perfect(const binary_tree_t *tree)

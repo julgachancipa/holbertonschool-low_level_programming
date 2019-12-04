@@ -1,8 +1,9 @@
 #include "binary_trees.h"
 
 /**
- *
- *
+ * emma_cansona_con_muchas_funciones - function that checks if its full
+* @tree: pointer to the root
+ * Return: 1 if true or 0 if false
  */
 
 int emma_cansona_con_muchas_funciones(const binary_tree_t *tree)
@@ -26,9 +27,9 @@ int emma_cansona_con_muchas_funciones(const binary_tree_t *tree)
 }
 
 /**
- *
- *
- *
+ * binary_tree_is_full - function that checks if its full
+ * @tree: pointer to the root
+ * Return: 1 if true or 0 if false
  */
 
 int binary_tree_is_full(const binary_tree_t *tree)

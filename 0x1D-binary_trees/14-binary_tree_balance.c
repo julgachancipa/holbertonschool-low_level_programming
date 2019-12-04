@@ -1,5 +1,5 @@
 #include "binary_trees.h"
-#include <stdio.h>
+
 /**
  *
  *
@@ -18,6 +18,12 @@ int leaves(const binary_tree_t *tree)
 
 	return(l);
 }
+
+/**
+ * binary_tree_balance - function that measures the balance factor of a tree
+ * @tree: pointer to the root
+ * Return: balance factor or 0 if null
+ */
 
 int binary_tree_balance(const binary_tree_t *tree)
 {
