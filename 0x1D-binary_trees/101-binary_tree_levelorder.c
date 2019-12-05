@@ -1,26 +1,31 @@
 #include "binary_trees.h"
-#include <stdio.h>
 
 /**
- *
- *
+ * subtrees - function that counts the subtrees
+ * @node: pointer to the node to count
+ * Return: number of subtrees
  */
 
-int tree_depth(const binary_tree_t *tree)
+int subtrees(const binary_tree_t *node)
 {
-	int depth;
+	int left, right;
 
-	if (tree == NULL)
+	if (node == NULL)
 		return (0);
-	depth = 0;
-	if (tree->parent != NULL)
-		depth = 1;
-	else
-		depth = 0;
-	depth += tree_depth(tree->parent);
-	return(depth);
+	left = subtrees(node->left);
+	right = subtrees(node->right);
+
+	if (left > right)
+		return (left + 1);
+	return (right + 1);
 }
 
+/**
+ * print_level - function that prints the level of a binary tree
+ * @tree: pointer to the root
+ * @level: level of the binary tree
+ * @func:pointer to a function to call for each node
+ */
 void print_level(const binary_tree_t *tree, int level, void (*func)(int))
 {
 	if (tree == NULL)
@@ -29,11 +34,16 @@ void print_level(const binary_tree_t *tree, int level, void (*func)(int))
 		func(tree->n);
 	else if (level > 1)
 	{
-		print_level(tree->left, level-1, func);
-		print_level(tree->right, level-1, func);
+		print_level(tree->left, level - 1, func);
+		print_level(tree->right, level - 1, func);
 	}
 }
 
+/**
+ * binary_tree_levelorder - function that uses the level-order traversal
+ * @tree: pointer to the root
+ * @func: pointer to a function to call for each node
+ */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
 	int depth, i;
@@ -41,8 +51,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 	if (tree == NULL)
 		return;
 
-	depth = tree_depth(tree);
+	depth = subtrees(tree);
 	for (i = 1; i <= depth; i++)
 		print_level(tree, i, func);
-	printf("%d", depth);
 }
