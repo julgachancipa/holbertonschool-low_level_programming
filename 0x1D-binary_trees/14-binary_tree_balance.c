@@ -1,24 +1,23 @@
 #include "binary_trees.h"
-
 /**
- *
- *
+ * subtrees - function that counts the subtrees
+ * @node: pointer to the node to count
+ * Return: number of subtrees
  */
 
-int leaves(const binary_tree_t *tree)
+int subtrees(const binary_tree_t *node)
 {
-	int l;
-	if (tree == NULL)
+	int left, right;
+
+	if (node == NULL)
 		return (0);
-	l = 0;
-	if (tree->left == NULL && tree->right == NULL)
-		l = 1;
-	l += leaves(tree->left);
-	l += leaves(tree->right);
+	left = subtrees(node->left);
+	right = subtrees(node->right);
 
-	return(l);
+	if (left > right)
+		return (left + 1);
+	return (right + 1);
 }
-
 /**
  * binary_tree_balance - function that measures the balance factor of a tree
  * @tree: pointer to the root
@@ -31,8 +30,8 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-	l_lt = leaves(tree->left);
-	l_rt = leaves(tree->right);
+	l_lt = subtrees(tree->left);
+	l_rt = subtrees(tree->right);
 
 	balance = l_lt - l_rt;
 	return (balance);
