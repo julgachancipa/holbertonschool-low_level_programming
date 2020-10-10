@@ -1,6 +1,9 @@
 # Low level programming
 
-I'm now a Holberton Student, this is my first repository as a full-stack engineer.
+You will understand how programming languages and Unix systems work, “what is going
+on under the hood”. This will allow you to optimize and debug anything later in your career.
+You will be working with algorithms and data structures which are essential foundations
+for any great Software Engineer, the type that the best companies want to hire.
 
 ## Zero Day
 
