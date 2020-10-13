@@ -1,4 +1,4 @@
-# Low level programming
+# Low level programming & Algorithm
 
 You will understand how programming languages and Unix systems work, “what is going
 on under the hood”. This will allow you to optimize and debug anything later in your career.
@@ -6,6 +6,8 @@ You will be working with algorithms and data structures which are essential foun
 for any great Software Engineer, the type that the best companies want to hire.
 
 ## Contents
+
+### Hatching out
 - [0x00-hello_world](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x00-hello_world)
 - [0x01-variables_if_else_while](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x01-variables_if_else_while)
 - [0x02-functions_nested_loops](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x02-functions_nested_loops)
@@ -23,18 +25,24 @@ for any great Software Engineer, the type that the best companies want to hire.
 - [0x0E-structures_typedef](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x0E-structures_typedef)
 - [0x0F-function_pointers](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x0F-function_pointers)
 - [0x10-variadic_functions](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x10-variadic_functions)
+- [0x11. C - printf](https://github.com/julgachancipa/printf)
+- [0x14-bit_manipulation](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
+- [0x18-dynamic_libraries](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x18-dynamic_libraries)
+- [0x1C-makefiles](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x1C-makefiles)
+
+### Data structures and Algorithms
 - [0x12-singly_linked_lists](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x12-singly_linked_lists)
 - [0x13-more_singly_linked_lists](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x13-more_singly_linked_lists)
-- [0x14-bit_manipulation](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
-- [0x15-file_io](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x15-file_io)
 - [0x17-doubly_linked_lists](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x17-doubly_linked_lists)
-- [0x18-dynamic_libraries](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x18-dynamic_libraries)
 - [0x19-stacks_queues_lifo_fifo](https://github.com/geraldinnebohr/monty/tree/c4102db5b43e43154c82eabdd97f2a26361f2c1a)
 - [0x1A-hash_tables](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x1A-hash_tables)
 - [0x1B-sorting_algorithms](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x1B-sorting_algorithms)
-- [0x1C-makefiles](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x1C-makefiles)
 - [0x1D-binary_trees](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x1D-binary_trees)
 - [0x1E-search_algorithms](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x1E-search_algorithms)
+
+### Linux and Unix system programming
+- [0x15-file_io](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x15-file_io)
+- [0x16. C - Simple Shell](https://github.com/julgachancipa/simple_shell)
 
 ## About Holberton
 
