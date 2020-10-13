@@ -34,7 +34,7 @@ for any great Software Engineer, the type that the best companies want to hire.
 - [0x12-singly_linked_lists](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x12-singly_linked_lists)
 - [0x13-more_singly_linked_lists](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x13-more_singly_linked_lists)
 - [0x17-doubly_linked_lists](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x17-doubly_linked_lists)
-- [0x19-stacks_queues_lifo_fifo](https://github.com/geraldinnebohr/monty/tree/c4102db5b43e43154c82eabdd97f2a26361f2c1a)
+- [0x19-stacks_queues_lifo_fifo](https://github.com/julgachancipa/monty)
 - [0x1A-hash_tables](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x1A-hash_tables)
 - [0x1B-sorting_algorithms](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x1B-sorting_algorithms)
 - [0x1D-binary_trees](https://github.com/julgachancipa/holbertonschool-low_level_programming/tree/master/0x1D-binary_trees)
