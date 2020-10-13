@@ -26,7 +26,7 @@
 - The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h
 - Don’t forget to push your header file
 
-## Bash
+### Bash
 
 - Allowed editors: vi, vim, emacs
 - All your scripts will be tested on Ubuntu 14.04 LTS
